@@ -1,0 +1,2 @@
+// LEGACY — kept for reference only. New code lives in src/sam/verifier.ts.
+export * from './verifier';

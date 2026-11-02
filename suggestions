@@ -1,0 +1,10 @@
+﻿Ideas that fit the exercise-game pitch and current stack:
+
+Daily streaks + reminders — consecutive-day counter, push notification to play. Retention driver, cheap to build.
+Leaderboards — weekly top kcal/moves per mode, stored online with stars. Community competition beyond 1v1.
+Friend challenges — share a code, async duel (beat my score), judged by SAM. No realtime server needed.
+Warm-up / cool-down flows — guided stretch audio before bootcamp, lowers injury risk, shows care.
+Progress graph — kcal + moves history per week in Settings. Proof of fitness benefit for judges.
+Adaptive difficulty — Muse Spark picks next level speed from recent accuracy. More Meta API usage for Stage One.
+Kids mode — slower speeds, bigger verbs, parental gate. Widens community reach.
+Highest value per effort: streaks, then leaderboards, then friend codes. Say which to build.

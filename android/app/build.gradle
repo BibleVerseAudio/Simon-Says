@@ -22,6 +22,9 @@ react {
     //   skip the bundling of the JS bundle and the assets. By default is just 'debug'.
     //   If you add flavors like lite, prod, etc. you'll have to list your debuggableVariants.
     // debuggableVariants = ["liteDebug", "prodDebug"]
+    //   Empty list => bundle JS + assets even for debug builds,
+    //   so the APK works standalone without Metro (USB/Wi-Fi).
+    debuggableVariants = []
 
     /* Bundling */
     //   A list containing the node command and its flags. Default is just 'node'.
@@ -84,6 +87,14 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        // FIX: react-native-screens 4.x + RN 0.81 + NDK 27:
+        // ShadowNode::Shared is deprecated → NDK 27 promotes -Wdeprecated to -Werror.
+        // Downgrade just this one warning so C++ build succeeds.
+        externalNativeBuild {
+            cmake {
+                cppFlags "-Wno-error=deprecated-declarations"
+            }
+        }
     }
     signingConfigs {
         debug {
@@ -92,6 +103,11 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+    }
+    // Bundle game voice mp3s into res/raw so react-native-sound can play them
+    sourceSets {
+        debug { res.srcDirs = ['src/main/res', 'src/main/raw-res'] }
+        release { res.srcDirs = ['src/main/res', 'src/main/raw-res'] }
     }
     buildTypes {
         debug {
