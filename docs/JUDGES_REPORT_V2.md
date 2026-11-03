@@ -1,4 +1,4 @@
-# Simona Says — Judges' Technical Report (ASD-STE 100)
+# Simona Says — (https://github.com/BibleVerseAudio/Simona-Says)
 
 ## 1. Purpose
 
@@ -10,9 +10,9 @@ This app is for those who want to train with fun.
 
 ## 2. The Project in Brief
 
-Simona Says is a mobile game for the Meta Muse Hackathon.
+Simona Says is a mobile game.
 The player listens to audio commands.
-The player stands in front of the telephone camera.
+The player stands in front of the phone camera.
 The player does body actions.
 The game checks the body actions.
 The game gives a result.
@@ -59,7 +59,6 @@ The camera shows a selfie view.
 Easy mode and Kids mode zoom to 1.4 times.
 Hard mode and Bootcamp mode zoom to 0.6 times.
 The game does not use frame processors.
-The team removed the frame processor because the worklets library caused duplicate native module errors on Android.
 The game now requests the camera permission when the game screen opens.
 The game shows an allow button if the permission is blocked.
 The game does not show a dark, silent camera view.
